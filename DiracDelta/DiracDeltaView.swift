@@ -4,6 +4,9 @@ import ScreenSaver
 class DiracDeltaView: ScreenSaverView {
 
     let currentAgeTextField = NSTextField()
+    let spinnerView = SpinnerView()
+    
+    let diracDelta = DiracDelta()
     
     // MARK: - Init
     
@@ -21,7 +24,7 @@ class DiracDeltaView: ScreenSaverView {
     // MARK: - Setup 
     
     private func setup() {
-        
+        spinnerView.diracDelta = diracDelta
     }
     
     private func setupViews() {
@@ -29,12 +32,24 @@ class DiracDeltaView: ScreenSaverView {
         currentAgeTextField.selectable = false
         currentAgeTextField.textColor = .whiteColor()
         currentAgeTextField.font = NSFont(name: "HelveticaNeue-Thin", size: 48)
+        currentAgeTextField.translatesAutoresizingMaskIntoConstraints = false
         
         //make textfield background clear
         currentAgeTextField.bezeled = false
         currentAgeTextField.drawsBackground = false
         
+        spinnerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Constraints
         addSubview(currentAgeTextField)
+        currentAgeTextField.centerXAnchor.constraintEqualToAnchor(centerXAnchor).active = true
+        currentAgeTextField.centerYAnchor.constraintEqualToAnchor(centerYAnchor).active = true
+        
+        addSubview(spinnerView)
+        spinnerView.heightAnchor.constraintEqualToConstant(50).active = true
+        spinnerView.widthAnchor.constraintEqualToConstant(50).active = true
+        spinnerView.rightAnchor.constraintEqualToAnchor(currentAgeTextField.leftAnchor, constant: -20).active = true
+        spinnerView.centerYAnchor.constraintEqualToAnchor(currentAgeTextField.centerYAnchor).active = true
     }
     
     override func drawRect(dirtyRect: NSRect) {
@@ -43,4 +58,10 @@ class DiracDeltaView: ScreenSaverView {
         NSRectFill(dirtyRect)
     }
     
+    override func animateOneFrame() {
+        diracDelta.currentDate = NSDate()
+        currentAgeTextField.stringValue = String(format: "%0.09f", diracDelta.birthdayAge())
+        
+        needsDisplay = true
+    }
 }
