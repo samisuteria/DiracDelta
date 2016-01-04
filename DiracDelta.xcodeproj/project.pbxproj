@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		269B99681C3A4661001EDDD7 /* DiracDeltaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B99671C3A4661001EDDD7 /* DiracDeltaView.swift */; };
+		269B996A1C3A4814001EDDD7 /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B99691C3A4814001EDDD7 /* NSColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		269B99671C3A4661001EDDD7 /* DiracDeltaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiracDeltaView.swift; sourceTree = "<group>"; };
+		269B99691C3A4814001EDDD7 /* NSColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorExtensions.swift; sourceTree = "<group>"; };
 		26B2FD201C3A450B0008B28E /* DiracDelta.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiracDelta.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B2FD271C3A450B0008B28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				269B99671C3A4661001EDDD7 /* DiracDeltaView.swift */,
+				269B99691C3A4814001EDDD7 /* NSColorExtensions.swift */,
 				26B2FD271C3A450B0008B28E /* Info.plist */,
 			);
 			path = DiracDelta;
@@ -129,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269B996A1C3A4814001EDDD7 /* NSColorExtensions.swift in Sources */,
 				269B99681C3A4661001EDDD7 /* DiracDeltaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
