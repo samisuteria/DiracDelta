@@ -14,3 +14,6 @@ Select `DiracDelta` target and build.
 
 Right click on `DiracDelta.saver` in the `Products` folder and click `Open in External Editor` to install the screen saver. 
 
+## Resources
+
+https://whichline.wordpress.com/2015/07/13/os-x-screensaver-swift-2-part-1/
