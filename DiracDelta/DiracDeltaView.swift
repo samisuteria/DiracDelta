@@ -37,10 +37,14 @@ class DiracDeltaView: ScreenSaverView {
         addSubview(currentAgeTextField)
     }
     
+    // MARK: - Drawing
+    
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
         NSColor.turquoiseColor().setFill()
         NSRectFill(dirtyRect)
     }
+    
+    
     
 }

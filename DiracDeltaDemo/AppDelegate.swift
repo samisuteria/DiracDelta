@@ -28,6 +28,5 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         // quit the app if the main window is closed
         NSApplication.sharedApplication().terminate(window)
     }
-
 }
 
