@@ -4,7 +4,7 @@ Screen saver based on [Jasdev's Impluse](https://github.com/jasdev/impulse) writ
 
 ## Preview 
 
-![](https://raw.githubusercontent.com/samisuteria/DiracDelta/master/Resources/previewImage.png)
+![](http://i.imgur.com/qAYe7Ql.gif)
 
 ## Usage 
 
